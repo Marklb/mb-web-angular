@@ -1,0 +1,65 @@
+<div class="panel panel-default register-panel">
+  <div class="panel-heading">Register</div>
+  <div class="panel-body">
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm.value)" class="register-form">
+      <div class="form-group">
+        <label class="mb-form-label-text" for="username">Username</label>
+        <input type="text" class="form-control" placeholder="Username"
+          [formControl]="registerForm.controls['username']">
+      </div>
+      <div class="form-group">
+        <label class="mb-form-label-text" for="email">Email address</label>
+        <input type="email" class="form-control" placeholder="Email"
+          [formControl]="registerForm.controls['email']">
+      </div>
+      <div class="form-group">
+        <label class="mb-form-label-text" for="password">Password</label>
+        <input type="password" class="form-control" placeholder="Password"
+          [formControl]="registerForm.controls['password']">
+      </div>
+      <div class="form-group">
+        <label class="mb-form-label-text" for="confirmPassword">Confim password</label>
+        <input type="password" class="form-control" placeholder="Confirm password"
+          [formControl]="registerForm.controls['confirmPassword']">
+      </div>
+      <button type="submit" class="btn btn-default register-btn"
+        [disabled]="!registerForm.valid">Register</button>
+    </form>
+  </div>
+</div>
+
+
+
+<!-- <div class="panel panel-default register-panel">
+  <div class="panel-heading">Register</div>
+  <div class="panel-body">
+    <form class="register-form" *ngIf="register">
+      <div class="form-group">
+        <label class="mb-form-label-text" for="username">Username</label>
+        <input type="test" class="form-control" id="username"
+          required
+          [(ngModel)]="register.username" name="username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label class="mb-form-label-text" for="email">Email address</label>
+        <input type="email" class="form-control" id="email"
+          required
+          [(ngModel)]="register.email" name="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label class="mb-form-label-text" for="password">Password</label>
+        <input type="password" class="form-control" id="password"
+          required
+          [(ngModel)]="register.password" name="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label class="mb-form-label-text" for="confirmPassword">Confim password</label>
+        <input type="password" class="form-control" id="confirmPassword"
+          required
+          [(ngModel)]="register.confirmPassword" name="confirmPassword" placeholder="Confirm password">
+      </div>
+      <button type="submit" class="btn btn-default register-btn"
+        (click)="onClickSubmit()">Register</button>
+    </form>
+  </div>
+</div> -->

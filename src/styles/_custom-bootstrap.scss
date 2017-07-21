@@ -1,0 +1,17 @@
+
+
+.btn {
+  @extend .noise;
+  @include border-radius(0);
+  font-family: $font-family-main;
+  // font-weight: bold;
+  // font-size: 20px;
+}
+
+.btn-default {
+  background-color: rgba(150,150,150,1);
+}
+
+.panel {
+  border-radius: 0;
+}

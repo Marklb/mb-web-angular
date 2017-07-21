@@ -1,0 +1,75 @@
+.logged-out-panel {
+  // border: 1px solid cyan;
+  margin: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-family: Hack, monospace;
+  font-size: 40px;
+  color: rgb(150, 150, 150);
+  justify-content: space-between;
+  cursor: default;
+  text-shadow: rgba(0, 0, 0, 0.8) 0px 0px 7px;
+  transition: background 0.5s ease;
+  -webkit-box-pack: justify;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+
+.login-btn {
+  color: rgba(230, 230, 230, 1);
+  background-color: rgba(20, 40, 80, 1);
+  border: 1px solid rgb(230, 230, 230);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  width: 200px;
+}
+
+.login-btn:hover {
+  color: rgba(230, 230, 230, 1);
+  background-color: rgba(20, 40, 80, 1);
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.login-btn:active {
+  color: rgba(230, 230, 230, 1);
+  background-color: rgba(30, 50, 90, 1);
+  border: 1px solid rgb(230, 230, 230);
+}
+
+
+
+
+.register-btn {
+  color: rgba(230, 230, 230, 1);
+  background-color: rgba(20, 40, 80, 1);
+  border: 1px solid rgb(230, 230, 230);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  width: 200px;
+}
+
+.register-btn:hover {
+  color: rgba(230, 230, 230, 1);
+  background-color: rgba(20, 40, 80, 1);
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.register-btn:active {
+  color: rgba(230, 230, 230, 1);
+  background-color: rgba(30, 50, 90, 1);
+  border: 1px solid rgb(230, 230, 230);
+}

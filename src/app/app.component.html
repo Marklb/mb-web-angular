@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<!-- <app-logged-out></app-logged-out> -->
+<!-- {{_showSidebar}} -->
+<div *ngIf="!_showSidebar; else elseBlock">
+   <router-outlet></router-outlet>
+</div>
+<ng-template #elseBlock>
+  <!-- Container for sidebar(s) + page content -->
+  <ng-sidebar-container>
+
+    <!-- A sidebar -->
+    <ng-sidebar
+      [(opened)]="_opened"
+      [mode]="over"
+      [closeOnClickOutside]="true">
+      <!-- [sidebarClass]="mb-sidebar"> -->
+      <!-- <p>Sidebar contents</p> -->
+      <app-sidebar-content></app-sidebar-content>
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content>
+      <button (click)="_toggleSidebar()">Toggle sidebar</button>
+      <router-outlet></router-outlet>
+    </div>
+  </ng-sidebar-container>
+ </ng-template>

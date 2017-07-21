@@ -1,0 +1,23 @@
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  &.ng-valid.ng-touched {
+    border-color: rgba(0,180,0,1);
+    -webkit-box-shadow: inset 28px 0px 26px -25px rgba(0,200,0,1);
+    -moz-box-shadow: inset 28px 0px 26px -25px rgba(0,200,0,1);
+    box-shadow: inset 28px 0px 26px -25px rgba(0,200,0,1);
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  &.ng-invalid.ng-touched {
+    border-color: rgba(200,0,0,1);
+    -webkit-box-shadow: inset 28px 0px 26px -25px rgba(200,0,0,1);
+    -moz-box-shadow: inset 28px 0px 26px -25px rgba(200,0,0,1);
+    box-shadow: inset 28px 0px 26px -25px rgba(200,0,0,1);
+  }
+}

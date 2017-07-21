@@ -1,0 +1,124 @@
+@import '../../styles/styles';
+
+
+
+.register-panel {
+  background-color: rgba(40,40,40,0.8);
+  border: 1px solid rgba(0,0,0,1);
+  min-width: 200px;
+  max-width: 400px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register-form {
+  // @include box-sizing(border-box);
+  // border: 1px solid rgba(0,0,0,1);
+  padding: 5px;
+  // background-color: rgba(40,40,40,0.8);
+
+}
+
+// .ng-valid.ng-touched {
+//   border-color: rgba(0,255,0,1);
+// }
+
+// .ng-valid[required], .ng-valid.required  {
+//   border-left: 5px solid #42A948; /* green */
+// }
+// .ng-invalid:not(form)  {
+//   border-left: 5px solid #a94442; /* red */
+// }
+
+.register-btn {
+  color: rgba(165,165,165,1);
+  background-color: rgba(30,30,30,0.8);
+  border: 1px solid rgba(0,0,0,1);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.register-btn:hover {
+  color: rgba(165,165,165,1);
+  background-color: rgba(50,50,50,0.8);
+  border: 1px solid rgba(0,0,0,1);
+}
+
+.register-btn:focus {
+  color: rgba(165,165,165,1);
+  background-color: rgba(40,40,40,0.8);
+  border: 1px solid rgba(0,0,0,1);
+  outline-color: rgba(50,50,250,1);
+}
+
+.register-btn:focus:active {
+  color: rgba(165,165,165,1);
+  background-color: rgba(40,40,40,0.8);
+  border: 1px solid rgba(0,0,0,1);
+  outline-color: rgba(50,50,250,1);
+}
+
+.register-btn:active {
+  color: rgba(165,165,165,1);
+  background-color: rgba(40,40,40,0.8);
+  border: 1px solid rgba(0,0,0,1);
+}
+
+
+// https://bootsnipp.com/snippets/oVdbr
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-fixed {
+    /* custom width */
+    width:320px;
+}
+.col-min {
+    /* custom min width */
+    min-width:320px;
+}
+.col-max {
+    /* custom max width */
+    // max-width:320px;
+    max-width:400px;
+}
+
+/* visual styles */
+.item {
+    width:100%;
+    height:100%;
+	border:1px solid #cecece;
+    padding:16px 8px;
+	background:#ededed;
+	background:-webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
+	background:-moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+	background:-ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+}
+
+/* content styles */
+.item {
+	display:table;
+}
+.content {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+.content:before {
+    content:"Content";
+    font-family:sans-serif;
+    font-size:12px;
+    letter-spacing:1px;
+    color:#747474;
+}

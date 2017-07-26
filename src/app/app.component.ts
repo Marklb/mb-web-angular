@@ -12,7 +12,7 @@ import { AuthenticationService } from './authentication.service';
 })
 export class AppComponent implements OnInit,OnDestroy {
   private _opened: boolean = false;
-  private _showSidebar: boolean = false;
+  public _showSidebar: boolean = false;
   private subscription: Subscription;
 
   constructor(private router: Router,

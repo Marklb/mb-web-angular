@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs/Subject';
 
@@ -6,10 +6,10 @@ import $ from 'jquery';
 
 const AUTHENITICATION_TOKEN_KEY = 'MBTOKEN';
 
-
 @Injectable()
 export class AuthenticationService {
   private authenticated = new Subject<any>();
+  public apiUrl: string = `http://${window.location.hostname}:1337`;
 
   constructor() { }
 
@@ -30,7 +30,7 @@ export class AuthenticationService {
 
         $.ajax({
           method: "POST",
-          url: "http://localhost:1337/isAuthenticated",
+          url: `${this.apiUrl}/isAuthenticated`,
           async: true,
           crossDomain: true,
           // processData: false,
@@ -88,7 +88,7 @@ export class AuthenticationService {
 
       $.ajax({
         method: "POST",
-        url: "http://localhost:1337/signup",
+        url: `${this.apiUrl}/signup`,
         async: true,
         crossDomain: true,
         // processData: false,
@@ -127,7 +127,7 @@ export class AuthenticationService {
 
       $.ajax({
         method: "POST",
-        url: "http://localhost:1337/login",
+        url: `${this.apiUrl}/login`,
         async: true,
         crossDomain: true,
         // processData: false,

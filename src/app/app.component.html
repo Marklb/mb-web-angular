@@ -19,7 +19,10 @@
 
     <!-- Page content -->
     <div ng-sidebar-content>
-      <button (click)="_toggleSidebar()">Toggle sidebar</button>
+      <div class="toggle-sidebar-btn" (click)="_toggleSidebar()">
+        <i class="fa fa-bars"></i>
+      </div>
+      <app-main-nav-menu></app-main-nav-menu>
       <router-outlet></router-outlet>
     </div>
   </ng-sidebar-container>

@@ -17,6 +17,8 @@ import { AuthenticationService } from './authentication.service';
 import { AuthenticationGuard } from './authentication-guard';
 
 import { SidebarModule } from 'ng-sidebar';
+import { MainNavMenuComponent } from './main-nav-menu/main-nav-menu.component';
+import { DataRelationOrganizerComponent } from './data-relation-organizer/data-relation-organizer.component';
 
 
 const routes = RouterModule.forRoot([
@@ -42,6 +44,11 @@ const routes = RouterModule.forRoot([
     canActivate: [AuthenticationGuard]
   },
   {
+    path: 'data-relation-organizer',
+    component: DataRelationOrganizerComponent,
+    canActivate: [AuthenticationGuard]
+  },
+  {
     path: '',
     component: LoggedOutComponent
   },
@@ -62,7 +69,9 @@ const routes = RouterModule.forRoot([
     RegisterComponent,
     DashboardComponent,
     LogoutComponent,
-    SidebarContentComponent
+    SidebarContentComponent,
+    MainNavMenuComponent,
+    DataRelationOrganizerComponent
   ],
   imports: [
     BrowserModule,

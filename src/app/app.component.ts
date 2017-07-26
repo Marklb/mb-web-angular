@@ -19,7 +19,7 @@ export class AppComponent implements OnInit,OnDestroy {
     private authenticationService: AuthenticationService) {
     // subscribe to home component messages
     this.subscription = this.authenticationService.isAuthenticated().subscribe(
-      value => { this._showSidebar = value.value; console.log('YOYOYO');console.log(value); });
+      value => { this._showSidebar = value.value; console.log(value); });
   }
 
   ngOnInit() {

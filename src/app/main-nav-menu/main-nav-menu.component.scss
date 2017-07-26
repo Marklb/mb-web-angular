@@ -1,0 +1,36 @@
+@import '../../styles/styles';
+
+.nav-menu-container {
+  background-color: rgba(20,20,20,1);
+  color: rgba(230,230,230,1);
+  overflow: hidden;
+
+  .module-selection-button {
+    display: block;
+    float: left;
+    padding: 4px 6px;
+    cursor: default;
+    user-select: none;
+    width: 150px;
+
+    &:hover {
+      background-color: rgba(30,30,30,1);
+    }
+  }
+
+  .user-dropdown {
+    display: block;
+    float: right;
+    padding: 4px 6px;
+    cursor: default;
+    user-select: none;
+
+    &:hover {
+      background-color: rgba(30,30,30,1);
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}

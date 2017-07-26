@@ -53,7 +53,7 @@ export class RegisterComponent implements OnInit {
   }
 
   submitForm(value: any) {
-    console.log(value);
+    // console.log(value);
     // console.log(this.register);
 
     this.authenticationService.register(

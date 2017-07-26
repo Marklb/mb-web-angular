@@ -1,0 +1,12 @@
+@import '../../styles/styles';
+
+.dro-container {
+  background-color: rgba(20,20,20,0.5);
+  @include box-sizing(border-box);
+  border: 1px solid rgba(40,40,40,1);
+  position: absolute;
+  top: 27px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}

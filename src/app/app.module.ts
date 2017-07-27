@@ -46,7 +46,8 @@ const routes = RouterModule.forRoot([
   {
     path: 'data-relation-organizer',
     component: DataRelationOrganizerComponent,
-    canActivate: [AuthenticationGuard]
+    canActivate: [AuthenticationGuard],
+    data: { roles: ['DataRelationOrganizer'] }
   },
   {
     path: '',

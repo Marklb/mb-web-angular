@@ -1,6 +1,7 @@
 import { Injectable, isDevMode } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import $ from 'jquery';
 
@@ -8,10 +9,16 @@ const AUTHENITICATION_TOKEN_KEY = 'MBTOKEN';
 
 @Injectable()
 export class AuthenticationService {
-  private authenticated = new Subject<any>();
   public apiUrl: string = `http://${window.location.hostname}:1337`;
+  private authenticated = new Subject<any>();
+  private user = new BehaviorSubject<any>(undefined);
+
 
   constructor() { }
+
+  userObserver(): Observable<any> {
+    return this.user.asObservable();
+  }
 
   isAuthenticated(): Observable<any> {
     return this.authenticated.asObservable();
@@ -42,22 +49,24 @@ export class AuthenticationService {
         })
         .done(( msg ) => {
           // alert( "Data Saved: " + msg );
-          console.log('Is Authenticated');
+          // console.log('Is Authenticated');
           // console.log(msg);
-          this.authenticated.next({ value: true });
+          this.authenticated.next(true);
+          this.user.next(msg.response.data.user);
+          console.log(msg.response.data.user);
           resolve(msg);
         })
         .fail(( jqXHR, textStatus ) => {
           // alert( "Request failed: " + textStatus );
-          console.log('Not Authenticated');
+          // console.log('Not Authenticated');
           // console.log(jqXHR);
           // console.log(textStatus);
-          this.authenticated.next({ value: false });
+          this.authenticated.next(false);
           reject(textStatus);
         });
       })
       .catch((err) => {
-        this.authenticated.next({ value: false });
+        this.authenticated.next(false);
         reject(err);
       });
     });
@@ -110,7 +119,7 @@ export class AuthenticationService {
         // alert( "Request failed: " + textStatus );
         // console.log(jqXHR);
         // console.log(textStatus);
-        this.authenticated.next({ value: false });
+        this.authenticated.next(false);
         reject(textStatus);
       });
     });
